@@ -1,0 +1,73 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Form design
+
+//@import "compass/css3";
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clr {clear:both;}
+
+ $bg : #d2e1ff ; //background color
+ $text : lighten($bg,35%);
+
+.roundedborder {
+   // @include border-radius (.2em);
+    border: 2px solid #ffffff;
+  }
+
+  // General Layout
+
+//body{background:#d2e1ff }
+
+form { 
+    background-color:#dedede;
+    font-size:1.2em; 
+    margin: 40em auto; 
+    @extend .roundedborder; 
+    padding:2em;
+    width:70%;
+  }
+
+ textarea {
+    @extend .roundedborder;
+    background-color: lighten($text, 10%);
+    color: #000000;
+    font-size:1em;
+    height:10em;
+    margin:.5em 0 1em;
+    padding:1em;
+    border-radius: .5em;
+  }
+
+  .form-legend {
+    background-color: #eea30e;
+    border-radius: 1em;
+    color: #d3c5a3;
+    font-size: 1em;
+    margin: .2em;
+    border: 0em;
+    padding: 1em;
+    width: 100%;
+}
+
+
+  button {
+    background-color: #5554aa;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    float: right;
+    padding: .25em 1em;
+    border-bottom: 0px;
+    border-right: 0px;
+    height: 40px;
+    width: 128px;
+  }
