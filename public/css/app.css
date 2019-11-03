@@ -82,6 +82,7 @@ form {
 input {
   min-height: 42px;
   border-radius: 1em;
+  border: 0px;
 }
 
 .input-component {

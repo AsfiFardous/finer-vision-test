@@ -169,12 +169,12 @@ export default class UserDetailApp extends Component {
 
     changeNextVisibleStep(currentIndex, evt) {
         if (!this.validate(currentIndex)) {
-            evt.preventDefault();
+            if(evt) evt.preventDefault();
             return;
         }
 
         if (currentIndex !== 2) {
-            evt.preventDefault();
+            if(evt) evt.preventDefault();
             currentIndex++;
             this.setState({ nowShowing: currentIndex });
         }
