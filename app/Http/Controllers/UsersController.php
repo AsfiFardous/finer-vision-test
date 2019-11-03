@@ -27,6 +27,14 @@ class UsersController extends Controller
         //
     }
 
+    private function create_date_of_birth(Request $request)
+    {
+        $dd = $request->input('date');
+        $mm = $request->input('month');
+        $yy = $request->input('year');
+        return $yy . '-' . $mm . '-' . $dd;
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -41,7 +49,9 @@ class UsersController extends Controller
             'email' => 'required',
             'telephone' => 'required',
             'gender' => 'required',
-            'date_of_birth' => 'required',
+            'date' => 'required',
+            'month' => 'required',
+            'year' => 'required',
         ]);
         $users = new users;
         $users->first_name = $request->input('first_name');
@@ -49,11 +59,11 @@ class UsersController extends Controller
         $users->email = $request->input('email');
         $users->telephone = $request->input('telephone');
         $users->gender = $request->input('gender');
-        $users->date_of_birth = $request->input('date_of_birth');
+        $users->date_of_birth = $this->create_date_of_birth($request);
         $users->comment = $request->input('comment');
         $users->save();
 
-        return redirect('/form')->with('success','Data submitted');
+        return redirect('/form')->with('success', 'Data submitted');
     }
 
     /**

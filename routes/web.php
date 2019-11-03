@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/form', [
     'uses'=>'PagesController@info'
 ]);
@@ -21,6 +18,3 @@ Route::get('/form', [
 Route::post('/save-data', [
     'uses'=>'UsersController@store'
 ]);
-/*
-Route::get('/form','PagesController@form');
-Route::resource('users','UsersController');

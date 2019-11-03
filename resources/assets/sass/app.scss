@@ -1,73 +1,140 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// // Fonts
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// // Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 //Form design
 
 //@import "compass/css3";
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.clr {clear:both;}
-
- $bg : #d2e1ff ; //background color
- $text : lighten($bg,35%);
-
-.roundedborder {
-   // @include border-radius (.2em);
-    border: 2px solid #ffffff;
-  }
-
-  // General Layout
-
-//body{background:#d2e1ff }
-
-form { 
-    background-color:#dedede;
-    font-size:1.2em; 
-    margin: 40em auto; 
-    @extend .roundedborder; 
-    padding:2em;
-    width:70%;
-  }
-
- textarea {
-    @extend .roundedborder;
-    background-color: lighten($text, 10%);
-    color: #000000;
-    font-size:1em;
-    height:10em;
-    margin:.5em 0 1em;
-    padding:1em;
-    border-radius: .5em;
-  }
-
-  .form-legend {
-    background-color: #eea30e;
-    border-radius: 1em;
-    color: #d3c5a3;
-    font-size: 1em;
-    margin: .2em;
-    border: 0em;
-    padding: 1em;
-    width: 100%;
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
 }
 
+$bg: #d2e1ff; //background color
+$text: lighten($bg, 35%);
+$radius: 1em;
 
-  button {
-    background-color: #5554aa;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    float: right;
-    padding: .25em 1em;
-    border-bottom: 0px;
-    border-right: 0px;
-    height: 40px;
-    width: 128px;
-  }
+// General Layout
+
+body {
+  background-color: $bg;
+}
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+form {
+  background-color: white;
+  font-size: 1.2em;
+  margin: auto;
+  width: 703px;
+  padding: 6px;
+  border-radius: $radius;
+  padding-bottom: 1px;
+}
+
+.step {
+  background-color: #dedede;
+  border-radius: $radius;
+  margin-bottom: 5px;
+  width: 691px;
+}
+
+.step-children {
+  margin-left: 20px;
+}
+
+.form-legend {
+  background-color: #eea30e;
+  border-radius: $radius;
+  color: #d3c5a3;
+  width: 691px;
+  height: 61px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.date {
+  display: inline;
+  padding-right: 8px;
+}
+
+.date-input {
+  width: 51px;
+}
+
+.text-input-div {
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.text-input {
+  width: 210px;
+}
+
+input {
+  min-height: 42px;
+  border-radius: $radius;
+}
+
+.input-component {
+  padding-top: 5px;
+}
+
+select {
+  min-height: 42px;
+  min-width: 162px;
+  border-radius: $radius;
+}
+
+label {
+  font-size: 0.9em;
+}
+
+textarea {
+  background-color: lighten($text, 10%);
+  color: #000000;
+  font-size: 1em;
+  height: 10em;
+  margin: 0.5em 0 1em;
+  border-radius: $radius;
+  resize: none;
+}
+
+button {
+  background-color: #5554aa;
+  border-radius: $radius;
+  cursor: pointer;
+  color: white;
+  float: right;
+  padding: 0.25em 1em;
+  margin-right: 16px;
+  border-bottom: 0px;
+  border-right: 0px;
+  height: 40px;
+  width: 128px;
+}
