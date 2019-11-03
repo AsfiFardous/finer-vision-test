@@ -63,7 +63,7 @@ class UsersController extends Controller
         $users->comment = $request->input('comment');
         $users->save();
 
-        return redirect('/form')->with('success', 'Data submitted');
+        return redirect('/')->with('success', 'Data submitted');
     }
 
     /**

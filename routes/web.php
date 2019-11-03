@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/form', [
+Route::get('/', [
     'uses'=>'PagesController@info'
 ]);
 
