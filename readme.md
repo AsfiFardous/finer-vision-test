@@ -2,7 +2,9 @@
 ### Requirements
 * nodejs v10
 * php 7.2
+* Laravel 5.7
 * MySQL
+
 
 ### How To run?
 * Clone the project
